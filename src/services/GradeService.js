@@ -5,7 +5,7 @@ const getAll = () => {
 };
 
 const get = (id) => {
-  return http.get(`/grade/${id}`);
+  return http.get(`/grade/${_id}`);
 };
 
 const create = (data) => {
@@ -13,11 +13,11 @@ const create = (data) => {
 };
 
 const update = (id, data) => {
-  return http.put(`/grade/${id}`, data);
+  return http.put(`/grade/${_id}`, data);
 };
 
 const remove = (id) => {
-  return http.delete(`/grade/${id}`);
+  return http.delete(`/grade/${_id}`);
 };
 
 const removeAll = () => {
