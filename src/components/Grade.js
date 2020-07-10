@@ -3,7 +3,7 @@ import GradeDataService from '../services/GradeService';
 
 const Grade = (props) => {
   const initialGradeState = {
-    id: null,
+    _id: null,
     name: '',
     subject: '',
     type: '',
@@ -12,10 +12,11 @@ const Grade = (props) => {
   const [currentGrade, setCurrentGrade] = useState(initialGradeState);
   const [message, setMessage] = useState('');
 
-  const getGrade = (id) => {
-    GradeDataService.get(id)
+  const getGrade = (_id) => {
+    GradeDataService.get(_id)
       .then((response) => {
         setCurrentGrade(response.data);
+        console.log(_id);
         console.log(response.data);
       })
       .catch((e) => {
