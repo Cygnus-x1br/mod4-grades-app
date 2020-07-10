@@ -1,7 +1,7 @@
 import http from '../http-common';
 
 const getAll = () => {
-  console.log('Grade:' + grade);
+  //console.log('Grade:' + grade);
   return http.get('/grade');
 };
 
