@@ -1,28 +1,23 @@
 import http from '../http-common';
 
 const getAll = () => {
-  //console.log('Grade:' + grade);
   return http.get('/grade');
 };
 
-const get = ({ _id }) => {
-  console.log('Id:' + _id);
-  return http.get(`/grade/${_id}`);
+const get = (id) => {
+  return http.get(`/grade/${id}`);
 };
 
 const create = (data) => {
-  console.log(data);
   return http.post('/grade', data);
 };
 
-const update = ({ _id }, data) => {
-  console.log('Id:' + _id);
-  return http.put(`/grade/${_id}`, data);
+const update = (id, data) => {
+  return http.put(`/grade/${id}`, data);
 };
 
-const remove = ({ _id }) => {
-  console.log('Id:' + _id);
-  return http.delete(`/grade/${_id}`);
+const remove = (id) => {
+  return http.delete(`/grade/${id}`);
 };
 
 const removeAll = () => {
@@ -30,7 +25,6 @@ const removeAll = () => {
 };
 
 const findByName = (name) => {
-  console.log('Name:' + name);
   return http.get(`/grade?name=${name}`);
 };
 
